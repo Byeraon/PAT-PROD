@@ -1,0 +1,304 @@
+header {
+  margin-top: 2%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.menu {
+  height: 97px;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.link {
+  position: relative;
+  color: #2191be;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 200ms;
+  font-family: Roboto, sans-serif;
+  margin-top: 58px;
+  font-size: 24px;
+  margin-left: 43px;
+}
+
+.link::before {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  transition: 200ms;
+  background-color: transparent;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200%;
+  content: "";
+}
+
+.activeLink {
+  color: white;
+  position: relative;
+  z-index: 2;
+  margin-top: -58px;
+}
+
+.activeLink::before {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  transition: 200ms;
+  background-color: #2191be;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200%;
+  content: "";
+}
+
+.logoPlace {
+  width: max-content;
+  z-index: 1;
+  margin-left: 5%;
+  height: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+}
+
+.logoPlace h1 {
+  text-decoration: none;
+  color: #2191be;
+  margin: 0 47px 0 0;
+  font-family: Roboto, sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.logo {
+  height: 110px;
+  width: 110px;
+  margin-left: 47px;
+  background-color: white;
+  background-image: url(../../images/Logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.linelogo {
+  margin: 0 47px;
+  height: 100px;
+  width: 5px;
+  background-color: #2191be;
+  min-width: 5px;
+}
+
+header::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #2191be;
+  height: 5px;
+  width: 100%;
+}
+
+#navIcon {
+  display: none;
+  width: 60px;
+  opacity: 0.7;
+  height: 45px;
+  position: fixed;
+  z-index: 20;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg) scale(0.7);
+  -moz-transform: rotate(0deg) scale(0.7);
+  -o-transform: rotate(0deg) scale(0.7);
+  transform: rotate(0deg) scale(0.7);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  bottom: 0;
+}
+
+#navIcon:hover {
+  opacity: 1;
+}
+
+.bluePlace {
+  width: 190px;
+  transition: 400ms all;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 190px;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2191be;
+}
+
+#navIcon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+/* Icon 3 */
+
+#navIcon span:nth-child(2) {
+  top: 0px;
+}
+
+#navIcon span:nth-child(3),
+#navIcon span:nth-child(4) {
+  top: 18px;
+}
+
+#navIcon span:nth-child(5) {
+  top: 36px;
+}
+
+#navIcon.open span:nth-child(2) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#navIcon.open span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#navIcon.open span:nth-child(4) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#navIcon.open span:nth-child(5) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+@media screen and (max-width: 1730px) {
+  .logoPlace h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .logoPlace h1 {
+    font-size: 40px;
+  }
+  .link {
+    font-size: 18px;
+    margin-top: 42px;
+  }
+  .activeLink {
+    margin-top: -42px;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1305px) {
+  .logoPlace h1 {
+    margin-right: 20px;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .linelogo {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  #navIcon {
+    display: block;
+    margin: 0;
+  }
+  header {
+    justify-content: center;
+  }
+  .logoPlace {
+    margin: 0;
+  }
+  .menu {
+    z-index: 20;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: fixed;
+  }
+
+  .arrowRealy {
+    width: 133px;
+    height: 70px;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .link {
+    animation: showing 500ms linear forwards;
+    font-size: 30px;
+    margin: 28px 0;
+    z-index: 20;
+    color: white;
+  }
+  .activeLink {
+    margin: 28px 0;
+    color: #2191be;
+    z-index: 30;
+  }
+  .activeLink::before {
+    background-color: white;
+  }
+  @keyframes showing {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

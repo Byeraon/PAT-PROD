@@ -1,0 +1,498 @@
+.homepage {
+  height: max-content;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+  height: 631px;
+  overflow-y: visible;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  border-bottom: 5px solid #2191be;
+}
+
+.slider::before {
+  position: absolute;
+  background-position: center center;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  border: none;
+  background-repeat: no-repeat;
+  bottom: -158px;
+  width: 398px;
+  height: 312px;
+  background-image: url(../../images/Rectangles/trectangle.svg);
+}
+
+.preimBlock {
+  position: absolute;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 143px;
+  font-size: 24px;
+  bottom: -7%;
+  font-weight: bold;
+  border: 5px solid #2191be;
+  color: #2191be;
+  font-family: Roboto, sans-serif;
+  z-index: 2;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0px 4px 29px 2px rgba(0, 0, 0, 0.25);
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  background-position: center center;
+  background-size: cover;
+  border: none;
+  background-repeat: no-repeat;
+  bottom: -159px;
+  right: 0;
+  transform: rotate(180deg);
+  width: 398px;
+  height: 312px;
+  background-image: url(../../images/Rectangles/trectangle.svg);
+}
+
+.sliderItem {
+  height: 100%;
+  min-width: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rectangleTop {
+  position: absolute;
+  min-height: 370px;
+  min-width: 770px;
+  width: 976px;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../images/Rectangles/sliderPloygon.svg);
+}
+.rectangleTop h2 {
+  margin-left: 25px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  transition: 400ms all;
+  color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.buttonHomepage {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-top: 3%;
+  margin-left: 25px;
+  background-color: transparent;
+  border: 6px solid white;
+  font-size: 24px;
+  transition: background-color 400ms, color 400ms;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  color: white;
+  width: 340px;
+  height: 80px;
+}
+
+.buttonHomepage:hover {
+  border: none;
+  background-color: white;
+  color: #2191be;
+}
+
+.buttonHomepage:hover .link {
+  color: #2191be;
+}
+
+.buttonHomepage:before {
+  position: absolute;
+  background-color: #62cef8;
+  left: 0;
+  bottom: 0;
+  content: "";
+  height: 5px;
+  width: 0%;
+}
+
+.buttonHomepage:hover:before {
+  transition: 300ms all;
+  transition-delay: 200ms;
+  height: 5px;
+  width: 100%;
+}
+
+.buttonHomepage:after {
+  position: absolute;
+  background-color: #62cef8;
+  right: 0;
+  top: 0;
+  content: "";
+  height: 5px;
+  width: 0%;
+}
+
+.buttonHomepage:hover:after {
+  transition: 300ms all;
+  transition-delay: 200ms;
+  height: 5px;
+  width: 100%;
+}
+
+.sliderAnim {
+  animation: slider 35s linear infinite;
+}
+
+.blockPreims {
+  margin-top: 13%;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.plackOne {
+  width: 447px;
+  background-color: white;
+  border: 1px solid #6c6c6c;
+  height: 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 400ms;
+  z-index: 2;
+}
+
+.plackOne:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+.logoPlack {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 107px;
+}
+
+.plackOne h3 {
+  margin: 0;
+  margin-top: 26px;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  color: #6c6c6c;
+}
+
+.infoBlock {
+  margin: 3% 0;
+  display: flex;
+  color: #2191be;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+}
+
+.infoBlock h1 {
+  text-align: center;
+  font-size: 72px;
+  font-weight: normal;
+  font-family: Roboto, sans-serif;
+}
+.infoBlock h2 {
+  font-weight: bold;
+  margin-bottom: 3%;
+  font-family: Roboto, sans-serif;
+  text-align: left;
+  width: 80%;
+}
+
+.first {
+  background-image: url(../../images/preimysh/rinok.svg);
+}
+
+.second {
+  background-image: url(../../images/preimysh/katch.svg);
+}
+
+.thrid {
+  background-image: url(../../images/preimysh/skidki.svg);
+}
+
+@keyframes slider {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: -200%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .slider::before {
+    height: 257px;
+    width: 323px;
+    bottom: -132px;
+  }
+  .slider::after {
+    height: 257px;
+    width: 323px;
+    bottom: -131px;
+  }
+  .plackOne {
+    height: 200px;
+    width: 350px;
+  }
+  .plackOne h3 {
+    font-size: 20px;
+  }
+  .logoPlack {
+    width: 119px;
+    height: 83px;
+  }
+  .infoBlock h1 {
+    font-size: 64px;
+  }
+  .infoBlock h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .rectangleTop h2 {
+    font-size: 18px;
+  }
+  .buttonHomepage {
+    width: 230px;
+    height: 65px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    border-width: 4px;
+  }
+  .slider {
+    height: 427px;
+  }
+  .rectangleTop {
+    width: 700px;
+    min-width: 0;
+    min-height: 0;
+    height: 85%;
+  }
+  .slider::before {
+    background-size: contain;
+    height: 257px;
+    width: 214px;
+    bottom: -132px;
+  }
+  .slider::after {
+    background-size: contain;
+    height: 257px;
+    width: 214px;
+    bottom: -131px;
+  }
+  .preimBlock {
+    bottom: -10%;
+    padding: 20px 80px;
+  }
+  .plackOne {
+    width: 280px;
+    height: 175px;
+  }
+  .plackOne h3 {
+    font-size: 18px;
+  }
+  .infoBlock h1 {
+    font-size: 50px;
+  }
+  .infoBlock h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .rectangleTop h2 {
+    font-size: 16px;
+  }
+  .rectangleTop {
+    width: 610px;
+    height: 79%;
+  }
+  .slider {
+    height: 400px;
+  }
+  .buttonHomepage {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+  }
+  .preimBlock {
+    bottom: -9%;
+    padding: 16px 80px;
+    font-size: 18px;
+  }
+  .plackOne {
+    width: 249px;
+    height: 177px;
+  }
+  .plackOne h3 {
+    font-size: 16px;
+  }
+  .infoBlock h1 {
+    font-size: 40px;
+  }
+  .infoBlock h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .preimBlock {
+    bottom: -11%;
+  }
+  .rectangleTop h2 {
+    font-size: 14px;
+  }
+  .rectangleTop {
+    width: 540px;
+    height: 90%;
+  }
+  .slider {
+    height: 310px;
+  }
+  .buttonHomepage {
+    width: 180px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .slider::before {
+    background-size: contain;
+    height: 257px;
+    width: 214px;
+    bottom: -132px;
+    left: -126px;
+  }
+  .slider::after {
+    background-size: contain;
+    height: 257px;
+    width: 214px;
+    bottom: -131px;
+    right: -126px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blockPreims {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plackOne {
+    width: 60%;
+    height: 150px;
+    margin-bottom: 5%;
+  }
+  .rectangleTop {
+    background-image: none;
+    background-color: #2192be88;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .buttonHomepage {
+    margin: 0;
+  }
+  .rectangleTop h2 {
+    margin-top: 0%;
+    margin-left: 0;
+    width: 100%;
+    background: transparent;
+    text-align: center;
+  }
+  .infoBlock {
+    margin: 0;
+    margin-bottom: 7%;
+  }
+  .infoBlock h1 {
+    font-size: 35px;
+  }
+  .infoBlock h2 {
+    width: 90%;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .plackOne {
+    width: 90%;
+  }
+  .plackOne:hover {
+    transform: scale(1.07);
+  }
+  .preimBlock {
+    bottom: -8%;
+
+    border-width: 4px;
+    font-size: 14px;
+    padding: 10px 42px;
+  }
+  .infoBlock h1 {
+    font-size: 30px;
+  }
+  .infoBlock h2 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .preimBlock {
+    padding: 10px 22px;
+  }
+
+  .slider::before {
+    left: -150px;
+  }
+  .slider::after {
+    right: -150px;
+  }
+  .infoBlock h1 {
+    font-size: 28px;
+  }
+  .infoBlock h2 {
+    font-size: 14px;
+  }
+}

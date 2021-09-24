@@ -1,0 +1,153 @@
+footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color: #6c6c6c;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+footer h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  color: white;
+  text-align: center;
+}
+
+.topTextes {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.firstText h3 {
+  margin-top: 3%;
+  text-align: left;
+}
+
+.secondText {
+  text-align: right;
+}
+
+.secondText h3 {
+  margin-top: 3%;
+  text-align: right;
+}
+
+.gpslogo {
+  background-image: url(../../images/footerlogos/location-pointer\ 1.svg);
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 180px;
+  height: 180px;
+  background-image: url(../../images/LogoWhite.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.link {
+  text-align: inherit;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 200ms;
+  font-family: Roboto, sans-serif;
+  margin-top: 58px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1500px) {
+  .logo {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .logo {
+    transform: translate(-50%, -120%);
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .firstText {
+    display: none;
+  }
+  .link {
+    font-size: 24px;
+  }
+  .secondText {
+    text-align: left;
+    margin-bottom: 5%;
+    font-size: 10px;
+  }
+  .secondText h3 {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  footer h3 {
+    font-size: 17px;
+    margin-bottom: 50px;
+  }
+  .logo {
+    transform: translate(0, -70%);
+    left: auto;
+    right: 10%;
+    display: block;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .link {
+    font-size: 20px;
+  }
+  .logo {
+    transform: translate(0, -70%);
+    left: auto;
+    right: 10%;
+    display: block;
+    width: 115px;
+    height: 115px;
+  }
+  .secondText h3 {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  footer h3 {
+    font-size: 12px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}

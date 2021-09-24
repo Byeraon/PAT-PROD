@@ -1,0 +1,147 @@
+.page {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.page h2 {
+  transition: 400ms all;
+  font-size: 50px;
+  text-align: center;
+  color: #2191be;
+  font-family: Roboto, sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  transition: 400ms all;
+  color: #2191be;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.buttonHomepage {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  background-color: transparent;
+  border: 6px solid #2191be;
+  font-size: 24px;
+  transition: background-color 400ms, color 400ms;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  color: #2191be;
+  width: 340px;
+  height: 80px;
+}
+
+.page h4 {
+  font-family: Roboto, sans-serif;
+  color: #2191be;
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+.page h5 {
+  color: #2191be;
+  font-family: Roboto, sans-serif;
+  font-size: 26px;
+  margin: 0;
+}
+
+.buttonHomepage:hover {
+  border: none;
+  background-color: #2191be;
+  color: white;
+}
+
+.buttonHomepage:hover .link {
+  color: white;
+}
+
+.buttonHomepage:before {
+  position: absolute;
+  background-color: #62cef8;
+  left: 0;
+  bottom: 0;
+  content: "";
+  height: 5px;
+  width: 0%;
+}
+
+.buttonHomepage:hover:before {
+  transition: 300ms all;
+  transition-delay: 200ms;
+  height: 5px;
+  width: 100%;
+}
+
+.buttonHomepage:after {
+  position: absolute;
+  background-color: #62cef8;
+  right: 0;
+  top: 0;
+  content: "";
+  height: 5px;
+  width: 0%;
+}
+
+.buttonHomepage:hover:after {
+  transition: 300ms all;
+  transition-delay: 200ms;
+  height: 5px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .page h2 {
+    margin: 50px 0;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .page h2 {
+    margin: 40px 0;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page h2 {
+    margin: 40px 0;
+    font-size: 38px;
+  }
+  .page {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .page h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+}
+
+@media screen and (max-width: 440px) {
+}
+
+@media screen and (max-width: 440px) {
+}
