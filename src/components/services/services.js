@@ -1,6 +1,6 @@
 import React from "react";
 import reactDom from "react-dom";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import style from "./services.module.css";
 
 export const Services = () => {
