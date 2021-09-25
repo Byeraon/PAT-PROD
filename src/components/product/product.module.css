@@ -196,6 +196,39 @@
 }
 
 @media screen and (max-width: 767px) {
+  .litrageBlock h3 {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .litrageBlock::before {
+    border-top: none;
+    left: 0;
+    transform: none;
+    top: 0;
+    width: 5px;
+    background-color: #2191be;
+    z-index: inherit;
+    -webkit-transform: translate(0, -50%);
+    transform: none;
+
+    height: 100%;
+  }
+  .litrageBlock::after {
+    position: absolute;
+    border-top: none;
+    right: 0;
+    content: "";
+    top: 0;
+    width: 5px;
+    background-color: #2191be;
+    z-index: inherit;
+    transform: none;
+    height: 100%;
+  }
   .page input {
     padding: 0 18px;
     margin: 30px auto;

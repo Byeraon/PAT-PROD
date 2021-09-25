@@ -36,7 +36,7 @@
   top: 50%;
   left: 55%;
   transform: translate(-50%, -50%);
-  z-index: 200;
+  z-index: 1;
   width: 70%;
   height: 70%;
   background-image: url(../../images/services/next.svg);
@@ -58,9 +58,21 @@
   width: 149px;
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
   background-size: cover;
-
   height: 123px;
+}
+
+.truck svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 70%;
+  left: 67%;
+  transform: translate(-50%, -50%) scale(1.5);
+  max-width: 121.41px;
+  max-height: 100.8px;
+  position: absolute;
 }
 
 .truckTrace {
@@ -79,18 +91,6 @@
   height: 5px;
 }
 
-.buttonsBlock button {
-  -webkit-transition: 400ms all;
-  transition: 400ms all;
-  cursor: pointer;
-  position: relative;
-
-  width: 121px;
-  height: 121px;
-  border-radius: 16px;
-  border: none;
-}
-
 .notShowing {
   animation: nSow 400ms linear forwards;
 }
@@ -104,6 +104,17 @@
     transform: translate(0, 20px);
     opacity: 0;
   }
+}
+.buttonsBlock button {
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+  cursor: pointer;
+  position: relative;
+
+  width: 121px;
+  height: 121px;
+  border-radius: 16px;
+  border: none;
 }
 
 .buttonsBlock button:active {
@@ -169,12 +180,59 @@
 }
 
 @media screen and (max-width: 767px) {
+  .truckPoints {
+    transform: scale(0.86);
+  }
+  .truckTrace {
+    transform: scale(0.86);
+  }
+
+  .buttonsBlock button {
+    -webkit-transition: 400ms all;
+    transition: 400ms all;
+    cursor: pointer;
+    position: relative;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    border: none;
+    user-select: none;
+  }
+
+  .buttonsBlock button:active {
+    width: 50px;
+    height: 50px;
+  }
+  .page h4 {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .changingBlock p {
+    font-size: 90px;
+    margin-bottom: 10px;
+  }
+  .buttonsBlock {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .infoBlock {
+    margin-top: 0px;
+  }
+  .infoBlock h4 {
+    font-weight: 10;
+    font-size: 24px;
+  }
   .page h2 {
     margin: 40px 0;
     font-size: 38px;
+    margin-bottom: 10px;
   }
   .page {
     width: 90%;
+  }
+  .truckPoints {
+    margin-bottom: 90px;
   }
 }
 
@@ -188,6 +246,14 @@
 }
 
 @media screen and (max-width: 440px) {
+  .page h4 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .infoBlock h4 {
+    font-weight: 10;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 440px) {

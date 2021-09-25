@@ -12,7 +12,7 @@ export const Contacts = () => {
         </NavLink>
       </button>
       <hr color="#62cef8" style={{ width: "40%", margin: "50px 0" }} />
-      <div>
+      <div className={style.blockDatas}>
         <h4>~ Номер телефона ~</h4>
         <br />
         <h5>+7 (920) 365-86-00 - Name</h5>
@@ -20,14 +20,14 @@ export const Contacts = () => {
         <h5>+7 (910) 999-43-93 - Name</h5>
       </div>
       <hr color="#62cef8" style={{ width: "40%", margin: "50px 0" }} />
-      <div>
+      <div className={style.blockDatas}>
         <h4>~ E-mail ~</h4>
         <br />
         <h5>iveuropet@mail.ru</h5>
       </div>
 
       <hr color="#62cef8" style={{ width: "40%", margin: "50px 0" }} />
-      <div>
+      <div className={style.blockDatas}>
         <h4>~ Адрес ~</h4>
         <br />
         <h5>г. Иваново, ул.Минская, д.126Б</h5>

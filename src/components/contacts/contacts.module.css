@@ -9,6 +9,10 @@
   margin-bottom: 5%;
 }
 
+.blockDatas h5 {
+  text-align: center;
+}
+
 .page h2 {
   transition: 400ms all;
   font-size: 50px;
@@ -122,6 +126,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .blockDatas h5 {
+    font-size: 20px !important;
+  }
   .page h2 {
     margin: 40px 0;
     font-size: 38px;
