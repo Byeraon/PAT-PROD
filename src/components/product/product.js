@@ -1,62 +1,136 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useRouteMatch, Switch, Route } from "react-router-dom";
 import { Item } from "./item/item";
-import { ItemPage } from "./itemPage/itemPage";
 import style from "./product.module.css";
 import { Type } from "./types/type";
+import _03_38_Mol from "../../images/bottles/0,3 BRC 38 мм Молзавод/attachmentt.jpeg";
+import _03_38_Iog from "../../images/bottles/0,3 BRC белая Йогурт/attachment.jpeg";
+import _03_38_Kvadr from "../../images/bottles/0,3 квадратная прозрачная/attachment.jpg";
+import _05_28 from "../../images/bottles/0,5 BPF 28 мм/DSC_3017.jpg";
+import _05_28_Him from "../../images/bottles/0,5 BPF 28 мм химия/DSC_9780.jpg";
+import _05_28_Rastvor from "../../images/bottles/0,5 BPF химия растворитель/attachment.jpeg";
+import _05_28_Kvadr_Mat from "../../images/bottles/0,5 BRC квадратная белая матовая/attachmentt.jpg";
+import _05_28_Mors from "../../images/bottles/0,5 BRC Морс/attachment.jpeg";
+import _05_28_Riat from "../../images/bottles/0,5 BRC риат/attachment.jpg";
+import _05_28_Kvadr from "../../images/bottles/0,5 квадратная BRC/attachment.jpg";
+import _10_21_Maslo from "../../images/bottles/0,9 21 DIN масло/attachment.jpeg";
+import _10_28_Rastvor from "../../images/bottles/0,9 BPF 28 мм химия растворитель/attachment.jpeg";
+import _10_28_Him_Mat from "../../images/bottles/0,9 BPF Химия Белая матовая/attachment.jpeg";
+import _10_28_Vine from "../../images/bottles/1 BPF 28 мм вино/attachment.jpg";
+import _10_28_Pivo from "../../images/bottles/1 BPF 28 мм пиво/attachment.jpg";
+import _10_28_Pivo_s from "../../images/bottles/1 BPF 28 мм пиво/attachment.jpeg";
+import _10_28_Him from "../../images/bottles/1 BPF химия/attachment.jpg";
+import _10_38_Milk_Riat from "../../images/bottles/1 BRC 38 мм риат/attachment.jpg";
+import _10_28_Mors from "../../images/bottles/1 BRC Hotfill Морс/attachment.jpeg";
+import _10_28_Milk_Mat from "../../images/bottles/1 BRC Молзавод белая матовая/attachment.jpeg";
+import _10_28_Milk_Mat_Next from "../../images/bottles/1 BRC молоко белая матовая/attachment.jpg";
+import _10_28_Milk_Next from "../../images/bottles/1 BRC молоко прозрачная/attachment.jpg";
+import _15_38_Milk from "../../images/bottles/14-38Домик/attachment.jpeg";
+import _15_28 from "../../images/bottles/1,5 BPF 28 мм/attachment.jpg";
+import _15_38 from "../../images/bottles/1.5 BRC 38 мм/attachment.jpg";
+import _20_28 from "../../images/bottles/2 BPF/attachment.jpeg";
+import _45_48 from "../../images/bottles/4.5 BRC 48 мм/attachment.jpeg";
+import _50_48 from "../../images/bottles/5 BRC 48 мм/attachment.jpg";
 
 export const Product = () => {
   const [choosedDiam, setDiam] = useState("Все");
   const [typeWater, setWater] = useState("Все");
-  let { path, url } = useRouteMatch();
 
   const [filteredData, setData] = useState([]);
 
   useEffect(() => {
     let changingArray = [
       {
-        litrage: "0.5 Л.",
+        litrage: "0.3 Л.",
         items: [
           {
             id: 0,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для безалкогольной и алкогольной продукции",
+            img: _03_38_Mol,
+            name: "ПЭТ бутылка для молока",
+            diametr: "38 мм",
+            flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 1,
+            img: _03_38_Iog,
+            name: "ПЭТ бутылка для йогуртов",
+            diametr: "38 мм",
+            flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 2,
+            img: _03_38_Kvadr,
+            name: "ПЭТ бутылка квадратная",
+            imgSize: "contain",
+            diametr: "38 мм",
+            flags: ["milk"],
+            cost: 20,
+          },
+        ],
+      },
+      {
+        litrage: "0.5 Л.",
+        items: [
+          {
+            id: 3,
+            img: _05_28,
+            name: "ПЭТ бутылка для алкогольной и безалклгольной продукции",
             diametr: "28 мм",
-            flags: ["alcohool", "fresh"],
+            imgSize: "contain",
+            flags: ["alcohool"],
+            cost: 20,
+          },
+          {
+            id: 4,
+            img: _05_28_Him,
+            name: "ПЭТ бутылка для химии",
+            diametr: "28 мм",
+            flags: ["teh", "cosmetic"],
             cost: 20,
           },
 
           {
-            id: 1,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для молока",
-            diametr: "48 мм",
-            flags: ["milk"],
-            cost: 6,
+            id: 6,
+            img: _05_28_Rastvor,
+            name: "ПЭТ бутылка для растворителей",
+            diametr: "28 мм",
+            flags: ["teh"],
+            cost: 20,
           },
           {
-            id: 2,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для соков",
-            diametr: "38 мм",
+            id: 5,
+            img: _05_28_Kvadr_Mat,
+            name: "ПЭТ бутылка квадатная матовая",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["teh"],
+            cost: 20,
+          },
+          {
+            id: 6,
+            img: _05_28_Mors,
+            name: "ПЭТ бутылка для морсов и соков",
+            diametr: "28 мм",
             flags: ["fresh"],
-            cost: 6,
+            cost: 20,
           },
           {
-            id: 3,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для молока",
+            id: 7,
+            img: _05_28_Riat,
+            name: "ПЭТ бутылка молока",
             diametr: "28 мм",
             flags: ["milk"],
-            cost: 6,
+            cost: 20,
           },
           {
-            id: 4,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для тех жидкостей",
-            diametr: "38 мм",
-            flags: ["teh"],
-            cost: 6,
+            id: 8,
+            img: _05_28_Kvadr,
+            name: "ПЭТ бутылка молока",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
           },
         ],
       },
@@ -64,29 +138,108 @@ export const Product = () => {
         litrage: "1.0 Л.",
         items: [
           {
-            id: 5,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для молока",
+            id: 9,
+            img: _10_21_Maslo,
+            name: "ПЭТ бутылка для масла",
+            diametr: "21 мм",
+            imgSize: "contain",
+            flags: ["podsoln"],
+            cost: 20,
+          },
+          {
+            id: 10,
+            img: _10_28_Rastvor,
+            name: "ПЭТ бутылка для растворителей",
+            diametr: "28 мм",
+
+            flags: ["teh"],
+            cost: 20,
+          },
+          {
+            id: 11,
+            img: _10_28_Him_Mat,
+            name: "ПЭТ бутылка для молока",
             diametr: "38 мм",
             flags: ["milk"],
-            cost: 6,
+            cost: 20,
+          },
+          {
+            id: 12,
+            img: _10_28_Vine,
+            name: "ПЭТ бутылка для вина",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["alcohool"],
+            cost: 20,
           },
 
           {
-            id: 6,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для технических жидкостей",
-            diametr: "48 мм",
-            flags: ["teh"],
-            cost: 6,
+            id: 14,
+            img: _10_28_Pivo,
+            name: "ПЭТ бутылка для пива",
+            diametr: "28 мм",
+            flags: ["alcohool"],
+            cost: 20,
           },
           {
-            id: 7,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для молока",
+            id: 15,
+            img: _10_28_Pivo_s,
+            name: "ПЭТ бутылка для пива",
+            diametr: "28 мм",
+            flags: ["alcohool"],
+            cost: 20,
+          },
+          {
+            id: 16,
+            img: _10_28_Him,
+            name: "ПЭТ бутылка для химии",
+            diametr: "28 мм",
+            flags: ["teh", "cosmetic"],
+            cost: 20,
+          },
+          {
+            id: 16,
+            img: _10_38_Milk_Riat,
+            name: "ПЭТ бутылка для молока",
+            diametr: "38 мм",
+            flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 17,
+            img: _10_28_Mors,
+            name: "ПЭТ бутылка для морса",
             diametr: "28 мм",
             flags: ["milk"],
-            cost: 6,
+            cost: 20,
+          },
+          {
+            id: 18,
+            img: _10_28_Milk_Mat,
+            name: "ПЭТ бутылка для молока",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 19,
+            img: _10_28_Milk_Mat_Next,
+            name: "ПЭТ бутылка для молока матовая",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
+          },
+
+          {
+            id: 21,
+            img: _10_28_Milk_Next,
+            name: "ПЭТ бутылка для молока прозрачная",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
           },
         ],
       },
@@ -94,37 +247,73 @@ export const Product = () => {
         litrage: "1.5 Л.",
         items: [
           {
-            id: 8,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для уксуса",
-            diametr: "28 мм",
-            flags: ["podsoln"],
-            cost: 6,
-          },
-
-          {
-            id: 9,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для молока",
-            diametr: "48 мм",
-            flags: ["milk"],
-            cost: 6,
-          },
-          {
-            id: 10,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для молока",
+            id: 22,
+            img: _15_38_Milk,
+            name: "ПЭТ бутылка для молока",
             diametr: "38 мм",
+            imgSize: "contain",
             flags: ["milk"],
-            cost: 6,
+            cost: 20,
           },
           {
-            id: 11,
-            img: "https://illan-gifts.ru/api/image/767x320-fitnu/butylka-pitevaia-mo8656-06-145749.",
-            name: "ПЭТ-бутылка для косметики",
+            id: 23,
+            img: _15_28,
+            name: "ПЭТ бутылка",
             diametr: "28 мм",
-            flags: ["cosmetic"],
-            cost: 6,
+
+            flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 23,
+            img: _15_38,
+            name: "ПЭТ бутылка",
+            diametr: "38 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
+          },
+        ],
+      },
+      {
+        litrage: "2.0 Л.",
+        items: [
+          {
+            id: 24,
+            img: _20_28,
+            name: "ПЭТ бутылка",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
+          },
+        ],
+      },
+      {
+        litrage: "4.5 Л.",
+        items: [
+          {
+            id: 25,
+            img: _45_48,
+            name: "ПЭТ бутылка",
+            diametr: "48 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
+          },
+        ],
+      },
+      {
+        litrage: "5.0 Л.",
+        items: [
+          {
+            id: 25,
+            img: _50_48,
+            name: "ПЭТ бутылка",
+            diametr: "48 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
           },
         ],
       },
@@ -214,101 +403,78 @@ export const Product = () => {
 
   return (
     <div className={style.page}>
-      <Switch>
-        <Route exact path={path}>
-          <input placeholder="Название продукта..."></input>
-          <div className={style.chooseType}>
-            <div className={style.chooseBlock}>
-              <div className={style.lineGray}>
-                <p>ДИАМЕТР ГОРЛЫШКА (мм)</p>
-              </div>
-              <div
-                style={{ flexDirection: "row", paddingLeft: "20px" }}
-                className={style.blockChase}
-              >
-                <Type currentType={choosedDiam} setType={setDiam} type="Все" />
-                <Type currentType={choosedDiam} setType={setDiam} type="28" />
-                <Type currentType={choosedDiam} setType={setDiam} type="38" />
-                <Type currentType={choosedDiam} setType={setDiam} type="48" />
-              </div>
-            </div>
-            <div className={style.chooseBlock}>
-              <div className={style.lineGray}>
-                <p>ТИП ЖИДКОСТИ</p>
-              </div>
-              <div
-                style={{ flexDirection: "column" }}
-                className={style.blockChase}
-              >
-                <Type currentType={typeWater} setType={setWater} type="Все" />
-                <Type
-                  currentType={typeWater}
-                  setType={setWater}
-                  type="Молоко и молочная продукция"
-                />
-                <Type
-                  currentType={typeWater}
-                  setType={setWater}
-                  type="Соки, фреши и смузи"
-                />
-                <Type
-                  currentType={typeWater}
-                  setType={setWater}
-                  type="Безалкогольная и алкогольная продукция"
-                />
-                <Type
-                  currentType={typeWater}
-                  setType={setWater}
-                  type="Подсолнечное масло, уксус"
-                />
-                <Type
-                  currentType={typeWater}
-                  setType={setWater}
-                  type="Косметика и фармацевтика"
-                />
-                <Type
-                  currentType={typeWater}
-                  setType={setWater}
-                  type="Технические жидкости"
-                />
-              </div>
-            </div>
+      <input placeholder="Название продукта..."></input>
+      <div className={style.chooseType}>
+        <div className={style.chooseBlock}>
+          <div className={style.lineGray}>
+            <p>ДИАМЕТР ГОРЛЫШКА (мм)</p>
           </div>
-          {filteredData.map(
-            (el, index) =>
-              el.items.length > 0 && (
-                <div style={{ position: "relative" }} key={index}>
-                  <div className={style.litrageBlock}>
-                    <h3>{el.litrage}</h3>
+          <div
+            style={{ flexDirection: "row", paddingLeft: "20px" }}
+            className={style.blockChase}
+          >
+            <Type currentType={choosedDiam} setType={setDiam} type="Все" />
+            <Type currentType={choosedDiam} setType={setDiam} type="28" />
+            <Type currentType={choosedDiam} setType={setDiam} type="38" />
+            <Type currentType={choosedDiam} setType={setDiam} type="48" />
+          </div>
+        </div>
+        <div className={style.chooseBlock}>
+          <div className={style.lineGray}>
+            <p>ТИП ЖИДКОСТИ</p>
+          </div>
+          <div style={{ flexDirection: "column" }} className={style.blockChase}>
+            <Type currentType={typeWater} setType={setWater} type="Все" />
+            <Type
+              currentType={typeWater}
+              setType={setWater}
+              type="Молоко и молочная продукция"
+            />
+            <Type
+              currentType={typeWater}
+              setType={setWater}
+              type="Соки, фреши и смузи"
+            />
+            <Type
+              currentType={typeWater}
+              setType={setWater}
+              type="Безалкогольная и алкогольная продукция"
+            />
+            <Type
+              currentType={typeWater}
+              setType={setWater}
+              type="Подсолнечное масло, уксус"
+            />
+            <Type
+              currentType={typeWater}
+              setType={setWater}
+              type="Косметика и фармацевтика"
+            />
+            <Type
+              currentType={typeWater}
+              setType={setWater}
+              type="Технические жидкости"
+            />
+          </div>
+        </div>
+      </div>
+      {filteredData.map(
+        (el, index) =>
+          el.items.length > 0 && (
+            <div style={{ position: "relative" }} key={index}>
+              <div className={style.litrageBlock}>
+                <h3>{el.litrage}</h3>
+              </div>
+              <div className={style.itemBlock}>
+                {el.items.map((elementItem, indexSecond) => (
+                  <div key={indexSecond} className={style.linkItem}>
+                    <Item elementItem={elementItem} />
                   </div>
-                  <div className={style.itemBlock}>
-                    {el.items.map((elementItem, indexSecond) => (
-                      <NavLink
-                        key={indexSecond}
-                        className={style.linkItem}
-                        to={`${url}/${elementItem.id}`}
-                      >
-                        <Item elementItem={elementItem} />
-                      </NavLink>
-                    ))}
-                  </div>
-                </div>
-              )
-          )}
-        </Route>
-        <Route path={`${path}/:itemId`}>
-          <ItemPage
-            allItems={filteredData
-              .map((el) =>
-                el.items.map((elementMas) => ({
-                  ...elementMas,
-                  litrage: el.litrage,
-                }))
-              )
-              .flat(1)}
-          />
-        </Route>
-      </Switch>
+                ))}
+              </div>
+            </div>
+          )
+      )}
     </div>
   );
 };

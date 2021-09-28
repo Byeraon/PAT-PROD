@@ -5,7 +5,10 @@ export const Item = ({ index, elementItem }) => {
   return (
     <div key={index} className={style.oneItem}>
       <div
-        style={{ backgroundImage: `url(${elementItem.img})` }}
+        style={{
+          backgroundSize: elementItem.imgSize,
+          backgroundImage: `url(${elementItem.img})`,
+        }}
         className={style.photoItem}
       ></div>
       <p>{elementItem.name}</p>
