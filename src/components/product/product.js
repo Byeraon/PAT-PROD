@@ -47,6 +47,7 @@ export const Product = () => {
             img: _03_38_Mol,
             name: "ПЭТ бутылка для молока",
             diametr: "38 мм",
+
             flags: ["milk"],
             cost: 20,
           },
