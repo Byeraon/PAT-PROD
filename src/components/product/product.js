@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Item } from "./item/item";
 import style from "./product.module.css";
 import { Type } from "./types/type";
 import _03_38_Mol from "../../images/bottles/0,3 BRC 38 мм Молзавод/attachmentt.jpeg";
 import _03_38_Iog from "../../images/bottles/0,3 BRC белая Йогурт/attachment.jpeg";
 import _03_38_Kvadr from "../../images/bottles/0,3 квадратная прозрачная/attachment.jpg";
-import _05_28 from "../../images/bottles/0,5 BPF 28 мм/DSC_3017.jpg";
+import _05_28 from "../../images/bottles/0,5 BPF 28 мм/DSC_3020.jpg";
 import _05_28_Him from "../../images/bottles/0,5 BPF 28 мм химия/DSC_9780.jpg";
 import _05_28_Rastvor from "../../images/bottles/0,5 BPF химия растворитель/attachment.jpeg";
 import _05_28_Kvadr_Mat from "../../images/bottles/0,5 BRC квадратная белая матовая/attachmentt.jpg";
@@ -34,8 +34,20 @@ import _50_48 from "../../images/bottles/5 BRC 48 мм/attachment.jpg";
 export const Product = () => {
   const [choosedDiam, setDiam] = useState("Все");
   const [typeWater, setWater] = useState("Все");
-
+  const [maxState, setMax] = useState();
+  const arrayRefs = [];
   const [filteredData, setData] = useState([]);
+
+  useEffect(() => {
+    if (arrayRefs.length > 0) {
+      setMax(
+        Math.max.apply(
+          null,
+          arrayRefs.map((el) => el.offsetHeight)
+        )
+      );
+    }
+  }, [arrayRefs]);
 
   useEffect(() => {
     let changingArray = [
@@ -299,7 +311,7 @@ export const Product = () => {
             name: "ПЭТ бутылка",
             diametr: "48 мм",
             imgSize: "contain",
-            flags: ["milk"],
+            flags: ["teh", "cosmetic"],
             cost: 20,
           },
         ],
@@ -313,7 +325,7 @@ export const Product = () => {
             name: "ПЭТ бутылка",
             diametr: "48 мм",
             imgSize: "contain",
-            flags: ["milk"],
+            flags: ["teh", "cosmetic"],
             cost: 20,
           },
         ],
@@ -467,11 +479,20 @@ export const Product = () => {
                 <h3>{el.litrage}</h3>
               </div>
               <div className={style.itemBlock}>
-                {el.items.map((elementItem, indexSecond) => (
-                  <div key={indexSecond} className={style.linkItem}>
-                    <Item elementItem={elementItem} />
-                  </div>
-                ))}
+                {el.items.map((elementItem, indexSecond) => {
+                  return (
+                    <div
+                      ref={(refBlock) => {
+                        arrayRefs.push(refBlock);
+                      }}
+                      key={indexSecond}
+                      style={{ minHeight: maxState + 2 }}
+                      className={style.linkItem}
+                    >
+                      <Item widthed={maxState + 2} elementItem={elementItem} />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )

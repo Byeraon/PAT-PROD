@@ -71,7 +71,7 @@ export const Services = () => {
                     }
               }
             ></button>
-            <h4
+            {/* <h4
               onClick={() => {
                 const element = document.getElementById("window");
                 reactDom.findDOMNode(element).className = style.notShowing;
@@ -92,7 +92,7 @@ export const Services = () => {
               }
             >
               ПОДРОБНЕЕ
-            </h4>
+            </h4> */}
             <button
               disabled={currentIndex === data.length - 1}
               onClick={
