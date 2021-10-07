@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Item } from "./item/item";
 import style from "./product.module.css";
 import { Type } from "./types/type";
@@ -35,6 +35,7 @@ export const Product = () => {
   const [choosedDiam, setDiam] = useState("Все");
   const [typeWater, setWater] = useState("Все");
   const [maxState, setMax] = useState();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const arrayRefs = [];
   const [filteredData, setData] = useState([]);
 
