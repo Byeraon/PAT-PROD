@@ -484,7 +484,6 @@ export const Product = () => {
 
   return (
     <div className={style.page}>
-      <input placeholder="Название продукта..."></input>
       <div className={style.chooseType}>
         <div className={style.chooseBlock}>
           <div className={style.lineGray}>
