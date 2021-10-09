@@ -25,12 +25,12 @@ export const Item = ({ widthed, index, elementItem }) => {
     if (el === "podsoln") {
       array.push({ color: "#ebebeb", name: "Прозрачная" });
     }
-    if (el === "podsoln") {
+    if (el === "cosmetic") {
       array.push(
         { color: "#ebebeb", name: "Прозрачная" },
         { color: "white", name: "Белая" },
         {
-          color: "linear-gradient(70deg, blue, pink)",
+          color: "linear-gradient(to right, #F6EFD2, #CEAD78)",
           name: "Цветная | Под заказ",
         }
       );

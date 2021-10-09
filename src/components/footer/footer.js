@@ -27,7 +27,7 @@ export const Footer = () => {
         </div>
         <div className={style.secondText}>
           <NavLink className={style.link} to="/contacts">
-            МЫ НА КАРТЕ
+            КОНТАКТЫ
           </NavLink>
           <h3 style={{ marginTop: "7%" }}>
             г. Иваново, ул.Минская, д.126Б{" "}

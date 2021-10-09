@@ -1,13 +1,13 @@
 import React from "react";
 import style from "./homepage.module.css";
-import Image1 from "../../images/bottles/1 BPF химия/attachment.jpg";
-import Image2 from "../../images/bottles/1 BRC Риат прозрачная/attachment.jpg";
-import Image3 from "../../images/bottles/1 BPF 28 мм пиво/attachment.jpg";
-import Image5 from "../../images/SliderImages/5514733-5a7921.jpg";
-import Image6 from "../../images/SliderImages/1598367517_37.jpg";
+import Image1 from "../../images/info/milk/original.jpg";
+import Image5 from "../../images/info/alco/727297.jpg";
+import Image3 from "../../images/info/teh/778243343_w1280_h1280_83c1eed5548d6317d8b19a38277c6c05.png";
+import Image2 from "../../images/SliderImages/5514733-5a7921.jpg";
+import Image9 from "../../images/SliderImages/1598367517_37.jpg";
 import Image7 from "../../images/info/cosmetic/UMETASS-100.jpg_q50.jpg";
 import Image8 from "../../images/info/cosmetic/000024103043.jpg";
-import Image9 from "../../images/info/cosmetic/200x50-мл-Frost-бостон-круглая-стеклянная-эфирное-масло-разливочной-с-черный-polyseal-конус.jpg";
+import Image6 from "../../images/info/cosmetic/200x50-мл-Frost-бостон-круглая-стеклянная-эфирное-масло-разливочной-с-черный-polyseal-конус.jpg";
 import Image4 from "../../images/SliderImages/svezh.jpg";
 import { NavLink } from "react-router-dom";
 

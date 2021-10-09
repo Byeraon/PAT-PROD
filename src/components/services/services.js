@@ -8,7 +8,10 @@ export const Services = () => {
   const data = [
     {
       number: 1,
-      text: ["ПОЗВОНИТЕ НАМ ПО НОМЕРУ +7 (920) 365-86-00", " И СДЕЛАЙТЕ ЗАКАЗ"],
+      text: [
+        "ПОЗВОНИТЕ НАМ ПО НОМЕРУ +7 (920) 365-86-00 или +7 (910) 999-43-93",
+        " И СДЕЛАЙТЕ ЗАКАЗ",
+      ],
       color: "#2191BE",
     },
     {
@@ -70,11 +73,7 @@ export const Services = () => {
                     }
               }
             ></button>
-            {/* <h4
-              onClick={() => {
-                const element = document.getElementById("window");
-                reactDom.findDOMNode(element).className = style.notShowing;
-              }}
+            <h4
               style={
                 currentIndex === data.length - 1
                   ? {
@@ -90,8 +89,9 @@ export const Services = () => {
                     }
               }
             >
-              ПОДРОБНЕЕ
-            </h4> */}
+              ДОСТАВКА ПО ГОРОДУ
+              <br /> БЕСПЛАТНО
+            </h4>
             <button
               disabled={currentIndex === data.length - 1}
               onClick={

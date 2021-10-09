@@ -62,20 +62,21 @@ export const Header = () => {
             </NavLink>
             <NavLink
               onTransitionEnd={handleChange}
-              className={style.link}
-              activeClassName={style.activeLink}
-              to="/product"
-            >
-              Каталог продукции
-            </NavLink>
-            <NavLink
-              onTransitionEnd={handleChange}
               to="/info"
               className={style.link}
               activeClassName={style.activeLink}
             >
               Полезно знать
             </NavLink>
+            <NavLink
+              onTransitionEnd={handleChange}
+              className={style.link}
+              activeClassName={style.activeLink}
+              to="/product"
+            >
+              Каталог продукции
+            </NavLink>
+
             <NavLink
               onTransitionEnd={handleChange}
               className={style.link}
@@ -106,19 +107,20 @@ export const Header = () => {
             О компании
           </NavLink>
           <NavLink
-            className={style.link}
-            activeClassName={style.activeLink}
-            to="/product"
-          >
-            Каталог продукции
-          </NavLink>
-          <NavLink
             to="/info"
             className={style.link}
             activeClassName={style.activeLink}
           >
             Полезно знать
           </NavLink>
+          <NavLink
+            className={style.link}
+            activeClassName={style.activeLink}
+            to="/product"
+          >
+            Каталог продукции
+          </NavLink>
+
           <NavLink
             className={style.link}
             activeClassName={style.activeLink}
