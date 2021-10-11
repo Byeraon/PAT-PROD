@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Item } from "./item/item";
 import style from "./product.module.css";
 import { Type } from "./types/type";
+import _01_38_iog from "../../images/bottles/0,1 BRC 38 мм. Актимель/attachment.jpeg";
+import _01_38_cosm from "../../images/bottles/0,3 BRC 38 мм белая молзавод/0,1 квадратная прозрачная/attachment.jpg";
 import _03_38_Mol from "../../images/bottles/0,3 BRC 38 мм Молзавод/attachmentt.jpeg";
+import _03_38_milkfresh from "../../images/bottles/0,3 BRC 38 мм Прозрачная/1.jpg";
 import _03_38_Iog from "../../images/bottles/0,3 BRC белая Йогурт/attachment.jpeg";
+import _03_38_freshmilk from "../../images/bottles/0,25. 38 мм/attachment.jpeg";
 import _03_38_Kvadr from "../../images/bottles/0,3 квадратная прозрачная/attachment.jpg";
 import _05_28 from "../../images/bottles/0,5 BPF 28 мм/DSC_3020.jpg";
 import _05_28_Him from "../../images/bottles/0,5 BPF 28 мм химия/DSC_9780.jpg";
@@ -14,8 +18,11 @@ import _05_28_Riat from "../../images/bottles/0,5 BRC риат/attachment.jpg";
 import _05_28_Kvadr from "../../images/bottles/0,5 квадратная BRC/attachment.jpg";
 import _10_21_Maslo from "../../images/bottles/0,9 21 DIN масло/attachment.jpeg";
 import _10_28_Rastvor from "../../images/bottles/0,9 BPF 28 мм химия растворитель/attachment.jpeg";
+import _10_28_DomDer from "../../images/bottles/0,93. Домик в деревне. 38 мм/attachment.jpeg";
 import _10_28_Him_Mat from "../../images/bottles/0,9 BPF Химия Белая матовая/attachment.jpeg";
+import _10_28_Pivas from "../../images/bottles/1,5 BPF Коричневая/attachment.jpeg";
 import _10_28_Vine from "../../images/bottles/1 BPF 28 мм вино/attachment.jpg";
+import _10_28_VineKor from "../../images/bottles/1 BPF 28 мм вино/attachmentD.jpg";
 import _10_28_Pivo from "../../images/bottles/1 BPF 28 мм пиво/attachment.jpg";
 import _10_28_Pivo_s from "../../images/bottles/1 BPF 28 мм пиво/attachment.jpeg";
 import _10_28_Him from "../../images/bottles/1 BPF химия/attachment.jpg";
@@ -53,6 +60,29 @@ export const Product = () => {
   useEffect(() => {
     let changingArray = [
       {
+        litrage: "0.1 Л.",
+        items: [
+          {
+            id: 0,
+            img: _01_38_cosm,
+            name: "ПЭТ бутылка",
+            diametr: "38 мм",
+            imgSize: "contain",
+            flags: ["cosmetic"],
+            cost: 20,
+          },
+          {
+            id: 0,
+            img: _01_38_iog,
+            name: "ПЭТ бутылка Йогурт",
+            diametr: "38 мм",
+
+            flags: ["milk"],
+            cost: 20,
+          },
+        ],
+      },
+      {
         litrage: "0.3 Л.",
         items: [
           {
@@ -70,6 +100,24 @@ export const Product = () => {
             name: "ПЭТ бутылка Bericap",
             diametr: "38 мм",
             flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 0,
+            img: _03_38_freshmilk,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "38 мм",
+
+            flags: ["milk", "fresh"],
+            cost: 20,
+          },
+          {
+            id: 0,
+            img: _03_38_milkfresh,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "38 мм",
+            imgSize: "contain",
+            flags: ["milk", "fresh"],
             cost: 20,
           },
           {
@@ -150,7 +198,7 @@ export const Product = () => {
             name: "ПЭТ бутылка",
             diametr: "28 мм",
 
-            flags: ["teh"],
+            flags: ["teh", "cosmetic"],
             cost: 20,
           },
           {
@@ -159,6 +207,14 @@ export const Product = () => {
             name: "ПЭТ бутылка",
             diametr: "28 мм",
             flags: ["teh", "cosmetic"],
+            cost: 20,
+          },
+          {
+            id: 17,
+            img: _10_28_Mors,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "28 мм",
+            flags: ["milk", "fresh"],
             cost: 20,
           },
           {
@@ -176,6 +232,14 @@ export const Product = () => {
             name: "ПЭТ бутылка Bericap",
             diametr: "38 мм",
             flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 11,
+            img: _10_28_Him_Mat,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "28 мм",
+            flags: ["cosmetic"],
             cost: 20,
           },
           {
@@ -198,8 +262,48 @@ export const Product = () => {
         ],
       },
       {
+        litrage: "0.85 / 1.0 Л.",
+        items: [
+          {
+            id: 9,
+            img: _10_21_Maslo,
+            name: "ПЭТ бутылка",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["podsoln", "cosmetic"],
+            cost: 20,
+          },
+        ],
+      },
+      {
         litrage: "0.93 / 0.95 Л.",
         items: [
+          {
+            id: 11,
+            img: _10_28_Him_Mat,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "28 мм",
+            flags: ["cosmetic"],
+            cost: 20,
+          },
+          {
+            id: 10,
+            img: _10_28_Rastvor,
+            name: "ПЭТ бутылка",
+            diametr: "28 мм",
+
+            flags: ["teh", "cosmetic"],
+            cost: 20,
+          },
+          {
+            id: 12,
+            img: _10_28_DomDer,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "38 мм",
+
+            flags: ["milk"],
+            cost: 20,
+          },
           {
             id: 16,
             img: _10_38_Milk_Riat,
@@ -219,20 +323,7 @@ export const Product = () => {
           },
         ],
       },
-      {
-        litrage: "0.85 / 1 Л.",
-        items: [
-          {
-            id: 9,
-            img: _10_21_Maslo,
-            name: "ПЭТ бутылка",
-            diametr: "28 мм",
-            imgSize: "contain",
-            flags: ["podsoln"],
-            cost: 20,
-          },
-        ],
-      },
+
       {
         litrage: "1.0 Л.",
         items: [
@@ -244,7 +335,15 @@ export const Product = () => {
             flags: ["cosmetic"],
             cost: 20,
           },
-
+          {
+            id: 12,
+            img: _10_28_VineKor,
+            name: "ПЭТ бутылка",
+            diametr: "28 мм",
+            imgSize: "contain",
+            flags: ["alcohool"],
+            cost: 20,
+          },
           {
             id: 16,
             img: _10_38_Milk_Riat,
@@ -253,15 +352,40 @@ export const Product = () => {
             flags: ["milk"],
             cost: 20,
           },
-
           {
-            id: 17,
-            img: _10_28_Mors,
-            name: "ПЭТ бутылка Bericap",
+            id: 12,
+            img: _10_28_Vine,
+            name: "ПЭТ бутылка",
             diametr: "28 мм",
-            flags: ["milk", "fresh"],
+            imgSize: "contain",
+            flags: ["alcohool"],
             cost: 20,
           },
+          {
+            id: 16,
+            img: _10_28_Him,
+            name: "ПЭТ бутылка",
+            diametr: "28 мм",
+            flags: ["teh", "cosmetic"],
+            cost: 20,
+          },
+          {
+            id: 14,
+            img: _10_28_Pivo,
+            name: "ПЭТ бутылка",
+            diametr: "28 мм",
+            flags: ["alcohool"],
+            cost: 20,
+          },
+          {
+            id: 14,
+            img: _10_28_Pivas,
+            name: "ПЭТ бутылка BPF",
+            diametr: "28 мм",
+            flags: ["alcohool"],
+            cost: 20,
+          },
+
           {
             id: 18,
             img: _10_28_Milk_Mat,
@@ -366,6 +490,23 @@ export const Product = () => {
             diametr: "28 мм",
             imgSize: "contain",
             flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 23,
+            img: _15_38,
+            name: "ПЭТ бутылка Bericap",
+            diametr: "38 мм",
+            imgSize: "contain",
+            flags: ["milk"],
+            cost: 20,
+          },
+          {
+            id: 14,
+            img: _10_28_Pivas,
+            name: "ПЭТ бутылка BPF",
+            diametr: "28 мм",
+            flags: ["alcohool"],
             cost: 20,
           },
         ],
