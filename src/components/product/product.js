@@ -213,7 +213,7 @@ export const Product = () => {
             id: 17,
             img: _10_28_Mors,
             name: "ПЭТ бутылка Bericap",
-            diametr: "28 мм",
+            diametr: "38 мм",
             flags: ["milk", "fresh"],
             cost: 20,
           },
@@ -237,7 +237,7 @@ export const Product = () => {
           {
             id: 11,
             img: _10_28_Him_Mat,
-            name: "ПЭТ бутылка Bericap",
+            name: "ПЭТ бутылка",
             diametr: "28 мм",
             flags: ["cosmetic"],
             cost: 20,
@@ -276,12 +276,12 @@ export const Product = () => {
         ],
       },
       {
-        litrage: "0.93 / 0.95 Л.",
+        litrage: "0.9 / 0.93 / 0.95 Л.",
         items: [
           {
             id: 11,
             img: _10_28_Him_Mat,
-            name: "ПЭТ бутылка Bericap",
+            name: "ПЭТ бутылка",
             diametr: "28 мм",
             flags: ["cosmetic"],
             cost: 20,
@@ -330,7 +330,7 @@ export const Product = () => {
           {
             id: 11,
             img: _10_28_Him_Mat,
-            name: "ПЭТ бутылка Bericap",
+            name: "ПЭТ бутылка",
             diametr: "28 мм",
             flags: ["cosmetic"],
             cost: 20,
@@ -399,7 +399,7 @@ export const Product = () => {
             id: 19,
             img: _10_28_Milk_Mat_Next,
             name: "ПЭТ бутылка матовая",
-            diametr: "28 мм",
+            diametr: "38 мм",
             imgSize: "contain",
             flags: ["milk"],
             cost: 20,
@@ -409,7 +409,7 @@ export const Product = () => {
             id: 21,
             img: _10_28_Milk_Next,
             name: "ПЭТ бутылка прозрачная",
-            diametr: "28 мм",
+            diametr: "38 мм",
             imgSize: "contain",
             flags: ["milk"],
             cost: 20,
@@ -453,19 +453,9 @@ export const Product = () => {
         litrage: "1.5 / 2 Л.",
         items: [
           {
-            id: 12,
-            img: _10_28_Vine,
-            name: "ПЭТ бутылка",
-            diametr: "28 мм",
-            imgSize: "contain",
-            flags: ["alcohool"],
-            cost: 20,
-          },
-
-          {
             id: 14,
-            img: _10_28_Pivo,
-            name: "ПЭТ бутылка",
+            img: _10_28_Pivas,
+            name: "ПЭТ бутылка BPF",
             diametr: "28 мм",
             flags: ["alcohool"],
             cost: 20,
