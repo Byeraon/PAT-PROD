@@ -41,8 +41,17 @@ export const Item = ({ widthed, index, elementItem }) => {
         { color: "white", name: "Белая" }
       );
     }
+    
     return true;
   });
+
+  if ((elementItem.name.toUpperCase().indexOf('КОЛПАЧОК')) !== -1 ||  (elementItem.name.toUpperCase().indexOf('РУЧКА')) !== -1) {
+    array = [];
+    array.push( {
+      color: "linear-gradient(to right, #F6EFD2, #CEAD78)",
+      name: "Цветная | Под заказ",
+    })
+  }
 
   array = Array.from(new Set(array.map(JSON.stringify))).map(JSON.parse);
 
@@ -59,7 +68,7 @@ export const Item = ({ widthed, index, elementItem }) => {
         <div className={style.rightLine}></div>
       </div>
       <p>{elementItem.name}</p>
-      <p style={{ marginTop: "auto" }}>Цвет: {array[currentColor].name}</p>
+       <p style={{ marginTop: "auto" }}>Цвет: {array[currentColor].name}</p>
       <div className={style.colorsBlock}>
         {array.map((el, index) => (
           <div
@@ -78,7 +87,7 @@ export const Item = ({ widthed, index, elementItem }) => {
       </div>
       <div className={style.diamAll}>
         <p style={{ fontWeight: 200 }}>{elementItem.diametr}</p>
-        <p>{elementItem.cost} ₽</p>
+        <p>от {elementItem.cost} ₽</p>
       </div>
     </div>
   );
