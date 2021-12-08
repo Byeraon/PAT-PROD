@@ -211,13 +211,17 @@ header::after {
   left: 50%;
 }
 
-@media screen and (max-width: 1730px) {
+@media screen and (max-width: 1790px) {
   .logoPlace h1 {
     font-size: 50px;
   }
+  .logo {
+    width: 60px;
+    height: 80px;
+  }
 }
 
-@media screen and (max-width: 1580px) {
+@media screen and (max-width: 1600px) {
   .logoPlace h1 {
     font-size: 40px;
   }
@@ -234,7 +238,7 @@ header::after {
   }
 }
 
-@media screen and (max-width: 1305px) {
+@media screen and (max-width: 1360px) {
   .logoPlace h1 {
     margin-right: 20px;
   }
@@ -246,7 +250,7 @@ header::after {
   }
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 1245px) {
   #navIcon {
     display: block;
     margin: 0;

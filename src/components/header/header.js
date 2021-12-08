@@ -44,7 +44,7 @@ export const Header = () => {
       <NavLink className={style.logoPlace} exact to="/">
         <div className={style.logo}></div>
         <div className={style.linelogo}></div>
-        <h1>Ивевропэт</h1>
+        <h1>ИВЕВРОПЭТ</h1>
       </NavLink>
       {/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent

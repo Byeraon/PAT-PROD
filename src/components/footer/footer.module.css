@@ -154,3 +154,8 @@ footer h3 {
     height: 80px;
   }
 }
+
+.secondText a {
+  color: white;
+  text-decoration: none;
+}

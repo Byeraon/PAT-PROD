@@ -34,13 +34,17 @@ export const Footer = () => {
             <span className={style.gpslogo}></span>
           </h3>
           <h3>
-            iveuropet@mail.ru <span className={style.maillogo}></span>
+            <a href="mailto:iveuropet@mail.ru">iveuropet@mail.ru</a>
+            <span className={style.maillogo}></span>
           </h3>
           <h3>
-            +7 (920) 365-86-00 +7 (920) 357-97-27{" "}
+            <a href="tel:+79203658600">+7 (920) 365-86-00 </a>
+            <a href="tel:+79203579727">+7 (920) 357-97-27</a>
             <span className={style.calllogo}></span>
           </h3>
-          <h3>+7 (910) 999-43-93</h3>
+          <h3>
+            <a href="tel:+79109994393">+7 (910) 999-43-93</a>
+          </h3>
         </div>
       </div>
       <h3>© 2021 • ООО «ИВЕВРОПЭТ» Производство полимерной тары</h3>
