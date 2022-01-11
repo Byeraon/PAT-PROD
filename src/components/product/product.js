@@ -65,12 +65,12 @@ export const Product = () => {
   useEffect(() => {
     let changingArray = [
       {
-        litrage: 'Колпачки и ручки',
+        litrage: "Колпачки и ручки",
         items: [
           {
             id: 0,
             img: _kolp_28,
-            name: "Укупорчный колпачок",
+            name: "Укупорочный колпачок",
             diametr: "28 мм",
             imgSize: "contain",
             flags: ["alcohool", "podsoln", "cosmetic", "teh", "fresh"],
@@ -79,20 +79,20 @@ export const Product = () => {
           {
             id: 2,
             img: _kolp_38,
-            name: "Укупорчный колпачок",
+            name: "Укупорочный колпачок",
             diametr: "38 мм",
             imgSize: "contain",
             flags: ["alcohool", "podsoln", "cosmetic", "teh", "fresh", "milk"],
-            cost: 0.80,
+            cost: 0.8,
           },
           {
             id: 2,
             img: _kolp_48,
-            name: "Укупорчный колпачок",
+            name: "Укупорочный колпачок",
             diametr: "48 мм",
             imgSize: "contain",
             flags: ["alcohool", "podsoln", "cosmetic", "teh", "fresh", "milk"],
-            cost: 2.50,
+            cost: 2.5,
           },
           {
             id: 1,
@@ -101,18 +101,18 @@ export const Product = () => {
             diametr: "28 мм",
             imgSize: "contain",
             flags: ["podsoln"],
-            cost: 1.50,
-          }, 
-          
+            cost: 1.5,
+          },
+
           {
             id: 1,
             img: pegas,
-            name: "Колпачок Pegas",
+            name: "Устройство для  закручивания",
             diametr: "28 мм",
             imgSize: "contain",
             flags: ["alcohool"],
-            cost: 350.00,
-          },  
+            cost: 350.0,
+          },
           {
             id: 2,
             img: _kolp_48,
@@ -120,9 +120,9 @@ export const Product = () => {
             diametr: "48 мм",
             imgSize: "contain",
             flags: ["alcohool", "podsoln", "cosmetic", "teh", "fresh", "milk"],
-            cost: 2.50,
-          }, 
-        ]
+            cost: 2.5,
+          },
+        ],
       },
       {
         litrage: "0.1 Л.",
@@ -134,7 +134,7 @@ export const Product = () => {
             diametr: "38 мм",
             imgSize: "contain",
             flags: ["cosmetic"],
-            cost: 3.50,
+            cost: 3.5,
           },
           {
             id: 0,
@@ -143,7 +143,7 @@ export const Product = () => {
             diametr: "38 мм",
 
             flags: ["milk"],
-            cost: 3.50,
+            cost: 3.5,
           },
         ],
       },
